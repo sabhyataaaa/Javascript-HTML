@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ISMT College — HTML Demonstration</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #004080, #0066cc);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav a {
+      color: #ffdd57;
+      font-weight: bold;
+    }
+
+    /* Element selector example */
+    h2 {
+      color: #0099ff;
+      margin-top: 20px;
+    }
+
+    /* Class selector example */
+    .highlight {
+      background: #333;
+      color: #ffdd57;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    /* ID selector example */
+    #main-title {
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 5px black;
+      color: #ffdd57;
+    }
+
+    table {
+      width: 80%;
+      margin: 15px auto;
+      border-collapse: collapse;
+      background: #1a1a1a;
+    }
+
+    th,
+    td {
+      border: 1px solid #f4efef;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background: #333;
+      color: #ffdd57;
+    }
+
+    img {
+      display: block;
+      margin: 15px auto;
+      border: 3px solid #0099ff;
+      border-radius: 10px;
+    }
+
+    iframe {
+      display: block;
+      margin: 15px auto;
+      border: 3px solid #444;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #222;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #80bfff;
+    }
+
+    ul,
+    ol {
+      margin-left: 40px;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px;
+    }
+
+    .flex-box {
+      background: #1a1a1a;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #0099ff;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 20px;
+    }
+
+    .grid-item {
+      background: #ff6600;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+    }
+  </style>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+  <!-- Navbar (Bootstrap Component) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">ISMT College</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#facilities">Facilities</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <!-- Inline CSS Example -->
+    <img src="sunderland-logo.gif" alt="University of Sunderland Logo" width="120"
+      style="display:block; margin: 10px auto;">
+
+
+    <h1 id="main-title">Welcome to ISMT College</h1>
+
+    <p><strong>ISMT College</strong> is one of the leading educational institutions in Nepal,
+      delivering internationally recognized programs. This page demonstrates
+      the use of basic <em>HTML elements</em> for assignment purposes.</p>
+    <nav>
+      <!-- External link to official site -->
+      <a href="https://ismt.edu.np" target="_blank">Visit Official Website</a>
+    </nav>
+  </header>
+
+  <hr>
+
+  <!-- About Section -->
+  <h2>About ISMT</h2>
+  <p>ISMT College, established with the vision of providing quality education in Nepal,
+    is affiliated with the <strong>University of Sunderland, UK</strong>.
+    Through this affiliation, students in Nepal can earn a globally recognized degree
+    while studying at ISMT.</p>
+
+  <p class="highlight">The college focuses on providing practical and career-oriented education.
+    It emphasizes modern teaching methods, well-equipped labs, and industry-based learning.
+    The mission of ISMT is to prepare graduates who can compete in the global market.</p>
+
+  <p class="text-center text-primary mt-3">Want to join IT college in Nepal?.</p>
+  <p class="bg-dark text-white p-3">Here is some info about colleges .</p>
+  <p class="text-uppercase fw-bold">You are about to get the best degree .</p>
+
+  <hr>
+
+  <!-- Vision and Mission Section -->
+  <h2>Vision and Mission</h2>
+  <p><strong>Vision:</strong> To be a center of academic excellence, producing graduates who are globally competitive
+    and socially responsible.</p>
+  <p><strong>Mission:</strong> To provide quality education through innovative teaching, modern facilities, and strong
+    industry partnerships.</p>
+
+  <hr>
+  <!-- Facilities Section with Bootstrap Grid -->
+  <section id="facilities" class="container my-4">
+    <h2 class="text-info">Facilities at ISMT</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card bg-dark text-white mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Library</h5>
+            <p class="card-text">Modern digital library with e-resources.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-white mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Computer Labs</h5>
+            <p class="card-text">Well-equipped labs for IT and Computing.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-white mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Sports</h5>
+            <p class="card-text">Indoor and outdoor sports facilities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- Programs Section -->
+  <section id="programs" class="container my-4">
+    <h2 class="text-info">Programs Available at ISMT</h2>
+    <ul class="list-group">
+      <li class="list-group-item">BSc (Hons) Computing</li>
+      <li class="list-group-item">BIT (Bachelor in Information Technology)</li>
+      <li class="list-group-item">BBA (Bachelor in Business Administration)</li>
+      <li class="list-group-item">MSc Computing</li>
+    </ul>
+  </section>
+
+  <!-- Sample Table -->
+  <h2>Program Details</h2>
+  <p>The following table displays sample academic programs with their duration and level:</p>
+  <table>
+    <tr>
+      <th>Program</th>
+      <th>Duration</th>
+      <th>Level</th>
+    </tr>
+    <tr>
+      <td>BSc (Hons) Computing</td>
+      <td>3 Years</td>
+      <td>Undergraduate</td>
+    </tr>
+    <tr>
+      <td>BBA</td>
+      <td>3 Years</td>
+      <td>Undergraduate</td>
+    </tr>
+    <tr>
+      <td>MSc Computing</td>
+      <td>1 Year</td>
+      <td>Postgraduate</td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <!-- Campus Locations -->
+  <h2>Campus Locations</h2>
+
+  <p style="font-family:cursive;">ISMT College has multiple campuses across Nepal:</p>
+
+  <table>
+    <tr>
+      <th>City</th>
+      <th>Campus Name</th>
+    </tr>
+    <tr>
+      <td>Kathmandu</td>
+      <td>ISMT College Kathmandu Campus</td>
+    </tr>
+    <tr>
+      <td>Pokhara</td>
+      <td>ISMT College Pokhara Campus</td>
+    </tr>
+    <tr>
+      <td>Butwal</td>
+      <td>ISMT College Butwal Campus</td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <!-- Image Example -->
+  <h2>ISMT Butwal</h2>
+  <p>ISMT College</p>
+  <img src="ismt_butwal.jpeg" alt="ISMT College Campus" width="350">
+
+  <hr>
+
+  <!-- Iframe Example -->
+  <h2>Visual information about Computer Science</h2>
+  <p>The iframe below embeds a YouTube video about Computer Science:</p>
+  <iframe width="500" height="300" src="https://www.youtube.com/embed/8mAITcNt710"
+    title="Introduction to Computer Science" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
+
+  <hr>
+
+  <!-- Student Life Section -->
+  <h2>Student Life</h2>
+  <p>Life at ISMT College is vibrant and dynamic. Students can join various clubs such as:</p>
+  <ul>
+    <li>IT Club</li>
+    <li>Sports Club</li>
+    <li>Research and Innovation Club</li>
+    <li>Entrepreneurship Club</li>
+  </ul>
+  <p>These activities help students build leadership skills, teamwork, and confidence beyond academics.</p>
+
+  <hr>
+
+  <!-- Learning Environment -->
+  <h2>Learning Environment</h2>
+  <p>ISMT College provides a learning environment that encourages critical thinking, innovation, and collaboration.
+    Students are motivated to participate in workshops, seminars, and research-based projects.
+    This approach not only enhances academic knowledge but also builds leadership and problem-solving skills.</p>
+
+  <p>Being affiliated with an international university, ISMT College also ensures
+    that its curriculum remains up-to-date with global trends in computing, information technology, and business
+    management.
+    Students benefit from both academic excellence and practical exposure.</p>
+
+  <hr>
+
+  <!--Flexbox layout demo-->
+  <h2>Why you should choose ISMT??? </h2>
+  <div class="flex-container">
+    <div class="flex-box">
+      <h3>Library</h3>
+      <p>Modern digital library with e-resources.</p>
+    </div>
+    <div class="flex-box">
+      <h3>Computer Labs</h3>
+      <p>Well-equipped labs for IT and Computing.</p>
+    </div>
+    <div class="flex-box">
+      <h3>Sports</h3>
+      <p>Indoor and outdoor sports facilities.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <!--Grid layout example-->
+  <h2>Colleges in Nepal </h2>
+  <div class="grid-container">
+    <div class="grid-item">
+      <h3>Kathmandu Campus</h3>
+      <p>Main hub of ISMT in the capital city.</p>
+    </div>
+    <div class="grid-item">
+      <h3>Pokhara Campus</h3>
+      <p>Providing quality education in western Nepal.</p>
+    </div>
+    <div class="grid-item">
+      <h3>Butwal Campus</h3>
+      <p>Expanding opportunities in mid-western Nepal.</p>
+    </div>
+  </div>
+
+  <!-- Modal Example -->
+  <div class="container text-center my-4">
+    <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#infoModal">
+      Learn More
+    </button>
+
+    <div class="modal fade" id="infoModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark text-white">
+          <div class="modal-header">
+            <h5 class="modal-title">About ISMT</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            ISMT College provides innovative, practical, and industry-oriented education.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer Section -->
+  <footer>
+    <p>Affiliated with: University of Sunderland, UK</p>
+    <p>Contact: <a href="mailto:info@ismt.edu.np">info@ismt.edu.np</a></p>
+    <p>© 2025 ISMT College — HTML Demonstration Page</p>
+  </footer>
+  <!-- javascript examples-->
+  <h2>Content of ISMT </h2>
+  <!-- Change content -->
+  <p id="demo">This is original content for ISMT</p>
+  <button id="changeBtn">Change Content</button>
+
+  <!-- Animation -->
+  <div id="box" style="width:50px;height:50px;background:red;margin-top:10px;"></div>
+  <button id="animateBtn">Start Animation</button>
+
+  <!-- Form Validation -->
+  <form id="myForm">
+    <input type="text" id="name" placeholder="Enter your name">
+    <button type="submit">Submit</button>
+  </form>
+  <p id="formMessage"></p>
+
+  <!-- Simulation Fetch -->
+  <button id="simulateBtn">Simulate Fetch</button>
+  <div id="simulateData"></div>
+
+  <!-- Real Fetch API -->
+  <button id="fetchBtn">Fetch Real Data</button>
+  <div id="fetchData"></div>
+
+  <!-- Link to external JS file -->
+  <script src="javascript.js"></script>
+</body>
+</html>
